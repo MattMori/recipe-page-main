@@ -1,0 +1,161 @@
+body {
+  background-color: #f3e5d8;
+  counter-reset: mynum;
+  .container {
+    margin: 8% 24% 8% 24%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 35px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #feffff;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 2% 0 2% 0;
+    align-self: start;
+    color: #787876;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 2% 0 2% 0;
+    align-self: start;
+    color: #744940;
+  }
+  h3 {
+    
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 2% 0 2% 5%;
+    align-self: start;
+    color: #50293c;
+  }
+
+  p.numbered:before {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 2% 0 2% 0;
+    align-self: start;
+    color: #744940;
+    content: counter(mynum) ": ";
+    counter-increment: mynum;
+    font-weight: bold;
+  }
+
+  .recipe-preparation-time {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 2% 0 2% 0;
+    align-self: start;
+    color: #564d50;
+  }
+
+  .recipe-description {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 2% 0 2% 0;
+    align-self: start;
+    color: #8c8d88;
+  }
+
+  .recipe-time {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 2% 0 2% 0;
+    align-self: start;
+    color: #564d50;
+  }
+
+  .recipe-ingredients {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 2% 0 2% 0;
+    align-self: start;
+    color: #564d50;
+  }
+
+  .recipe-instructions {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 2% 0 2% 0;
+    align-self: start;
+    color: #564d50;
+  }
+
+  .recipe-instructions ol {
+    list-style-type: none;
+    counter-reset: mynum;
+  }
+
+  .recipe-instructions ol li {
+    counter-increment: mynum;
+    margin: 2% 0 2% 0;
+    color: #744940;
+  }
+
+  .recipe-nutrition-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 2% 0 2% 0;
+    align-self: start;
+    color: #564d50;
+  }
+
+  .recipe-nutrition {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 3% 0 3% 0;
+    align-self: start;
+    color: #564d50;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .recipe-nutrition th {
+    color: #a6a3a4;
+    font-weight: 700;
+    padding: 1%;
+    font-size: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #dbdbdb;
+  }
+
+  .recipe-nutrition td {
+    color: #744940;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 1%;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .attribution {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 2% 0 2% 0;
+    text-align: center;
+    color: #564d50;
+  }
+
+  .attribution a {
+    color: #744940;
+  }
+
+  .attribution a:hover {
+    color: #50293c;
+  }
+}
