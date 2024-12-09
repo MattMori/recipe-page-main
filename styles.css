@@ -1,6 +1,9 @@
 body {
   background-color: #f3e5d8;
   counter-reset: mynum;
+  margin: 0;
+  padding: 0;
+
   .container {
     margin: 8% 24% 8% 24%;
     padding: 3%;
@@ -31,30 +34,18 @@ body {
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 3.0rem;
     font-weight: 700;
     margin: 2% 0 2% 0;
     align-self: start;
     color: #744940;
   }
   h3 {
-    
     font-size: 2rem;
     font-weight: 700;
     margin: 2% 0 2% 5%;
     align-self: start;
     color: #50293c;
-  }
-
-  p.numbered:before {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin: 2% 0 2% 0;
-    align-self: start;
-    color: #744940;
-    content: counter(mynum) ": ";
-    counter-increment: mynum;
-    font-weight: bold;
   }
 
   .recipe-preparation-time {
@@ -97,15 +88,29 @@ body {
     color: #564d50;
   }
 
-  .recipe-instructions ol {
+  .recipe-instructions {
     list-style-type: none;
     counter-reset: mynum;
+    margin: 0;
+    padding: 0;
   }
 
-  .recipe-instructions ol li {
+  .recipe-instructions li {
     counter-increment: mynum;
-    margin: 2% 0 2% 0;
+    margin: 1% 0;
+    font-size: 1.6rem;
+    position: relative;
+    padding-left: 5%;
+  }
+
+  .recipe-instructions li::before {
+    content: counter(mynum) ". ";
+    font-size: 1.8rem;
+    font-weight: bold;
     color: #744940;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 
   .recipe-nutrition-text {
@@ -157,5 +162,33 @@ body {
 
   .attribution a:hover {
     color: #50293c;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    .container {
+      margin: 0%;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    .attribution {
+      font-size: 1.2rem;
+    }
+
+    .attribution a {
+      font-size: 1.2rem;
+    }
   }
 }
